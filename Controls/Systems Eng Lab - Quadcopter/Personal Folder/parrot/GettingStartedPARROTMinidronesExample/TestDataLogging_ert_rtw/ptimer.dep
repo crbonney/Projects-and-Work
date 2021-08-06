@@ -1,0 +1,8 @@
+ptimer.o ptimer.o: \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/parrot/src/ptimer.c \
+ C:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/SUPPOR~1/parrot/include/ptimer.h \
+ C:/Users/Chris/OneDrive/DOCUME~1/MATLAB/ESE448~1/parrot/GETTIN~1/TestDataLogging_ert_rtw/MW_target_hardware_resources.h
+
+C:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/SUPPOR~1/parrot/include/ptimer.h:
+
+C:/Users/Chris/OneDrive/DOCUME~1/MATLAB/ESE448~1/parrot/GETTIN~1/TestDataLogging_ert_rtw/MW_target_hardware_resources.h:

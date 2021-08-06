@@ -1,0 +1,2 @@
+#include <winuser.rh>
+1 RT_MANIFEST "physical_dynamics_transfer_model.auto.manifest"
