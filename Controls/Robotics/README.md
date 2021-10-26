@@ -17,5 +17,6 @@ Models open-loop dynamics and torque required for each joint to hold cancel the 
 The controller of the system, cancels the open-loop dynamics (Torque Calculator), and uses a PD controller to create spring-damper behavior to drive to a set point. \
 ![](pd_partitioned_control_law.jpg)
 
-Below is the result of the controller. 
+Below is the result of the controller.
+
 ![](rrr_animated.gif)
