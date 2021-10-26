@@ -19,4 +19,5 @@ The controller of the system, cancels the open-loop dynamics (Torque Calculator)
 
 Below is the result of the controller.
 
+
 ![](rrr_animated.gif)
