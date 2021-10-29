@@ -1,5 +1,3 @@
-
-
 //dependencies
 const Discord = require("discord.js");
 const fs = require('fs');
@@ -44,10 +42,10 @@ let gt_last_episode_data = [];
 let bot = new Discord.Client();
 bot.login(token);
 
-//admin users
+//admin user ids
 const craig_id = "520298731900239882";
 let craig;
-const rabbit_id = "190248534925246464"; // me
+const rabbit_id = "190248534925246464";
 let rabbit;
 
 // server channel ids
@@ -69,6 +67,7 @@ const bot_server_general_id = "615977860523360306";
 let bot_server_general;
 let bot_server;
 
+// counters and invervals used for manually updating XML info
 let update_counter;
 let gt_update_counter;
 let manual_update_interval;
@@ -88,16 +87,18 @@ console.log = function (data) {
 	this.logCopy(timestamp, data);
 };
 
-// bot init
+// bot init, loads channel and user information
 const on_ready = bot.on("ready", ()=> {
 
   // load server information
 	rabbit = bot.users.get(rabbit_id);
 	craig = bot.users.get(craig_id);
 
+  //testing server and channels
 	bot_server_general = bot.channels.get(bot_server_general_id);
 	bot_server = bot_server_general.guild;
 
+  //main server and channels channels
 	legendarium_general = bot.channels.get(legendarium_general_id);
 	legendarium_episode_discussion = bot.channels.get(legendarium_episode_discussion_id);
 	legendarium_green_team_discussion = bot.channels.get(legendarium_green_team_discussion_id);
@@ -112,9 +113,10 @@ const on_ready = bot.on("ready", ()=> {
 
 });
 
+// handles errors from internet connection failures. Catastrophic errors are still thrown and restart the bot
 const on_error = bot.on("error", (error) => {
 	console.log(error);
-})
+});
 
 // sends welcome message to new users
 const on_join = bot.on("guildMemberAdd", (member) => {
@@ -473,7 +475,7 @@ const setRole = function(message) {
 
 		user.addRole(role).then(message.channel.send("Added role to user.")).catch(console.error);
 
-	} // remove the role from the user   
+	} // remove the role from the user
   else {
 		if (!user.roles.some(role => role.name === desired_role)) {
 			return message.channel.send("User already doesn't have this role.");
