@@ -9,3 +9,7 @@ The last subfolder contains the full simulation of the nonlinear dynamics with c
 - Assignment 7 (Simulated Flight): https://youtu.be/AXaAB7tSJRI
 - Assignment 8 (System Identification): https://youtu.be/3JMsl59doIs
 - Assignment 9 (Simulated Flip and Orbit): https://youtu.be/uZ0dNedevtY
+
+A short gif of the flip simulation is shown below as well.
+
+![](drone_flip.gif)
